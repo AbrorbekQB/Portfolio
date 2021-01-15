@@ -139,7 +139,7 @@ a {
   margin-left: auto;
   background-color: transparent;
   border: none;
-  background: url("/img/hamburger.svg") no-repeat;
+  background: url("../img/hamburger.svg") no-repeat;
   background-size: 80%;
   background-position: center center;
 }
