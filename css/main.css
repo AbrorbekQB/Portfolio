@@ -1,0 +1,247 @@
+@font-face {
+  font-family: "Merriweather Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/merriweather-sans-v13-latin-300.woff2") format("woff2"), url("../fonts/merriweather-sans-v13-latin-300.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Merriweather Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/merriweather-sans-v13-latin-regular.woff2") format("woff2"), url("../fonts/merriweather-sans-v13-latin-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Merriweather Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/merriweather-sans-v13-latin-700.woff2") format("woff2"), url("../fonts/merriweather-sans-v13-latin-700.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Merriweather Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fonts/merriweather-sans-v13-latin-800.woff2") format("woff2"), url("../fonts/merriweather-sans-v13-latin-800.woff") format("woff");
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  font-family: "Merriweather Sans", "Arial", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.site__navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.site__navbar__logo {
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
+.site__navbar__logo:hover, .site__navbar__logo:focus {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.navbar__logo__img {
+  width: 70px;
+  height: 70px;
+}
+
+.navbar__owner__name__wrapper {
+  font-family: "Merriweather Sans", "Arial", sans-serif;
+}
+
+.navbar__owner__fullname {
+  font-weight: 800;
+  margin: 0 0 2px;
+  line-height: 1;
+  color: #2b2b2d;
+  font-size: 1rem;
+}
+
+.navbar__owner__profession {
+  margin: 0;
+  color: #7a7a7a;
+  font-size: 0.8rem;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 0 auto;
+  padding: 0;
+}
+
+.menu__item {
+  list-style-type: none;
+}
+
+.menu__link {
+  font-family: "Merriweather Sans", "Arial", sans-serif;
+  font-weight: 700;
+  color: #2b2b2d;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.main__link__effect {
+  font-family: "Merriweather Sans", "Arial", sans-serif;
+  font-weight: 700;
+  color: #2b2b2d;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.hamburger__btn {
+  display: none;
+  width: 28px;
+  height: 28px;
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  background: url("/img/hamburger.svg") no-repeat;
+  background-size: 80%;
+  background-position: center center;
+}
+
+@media (min-width: 864px) {
+  .menu__item {
+    list-style-type: none;
+    margin-left: 40px;
+  }
+  .menu__link {
+    font-family: "Merriweather Sans", "Arial", sans-serif;
+    font-weight: 700;
+    color: #2b2b2d;
+    text-transform: uppercase;
+    font-size: 1rem;
+    position: relative;
+  }
+  .menu__link:before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #2b2b2d;
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    opacity: 0;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  .menu__link:hover::before, .menu__link:focus::before {
+    opacity: 1;
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+  }
+  .main__link__effect {
+    font-family: "Merriweather Sans", "Arial", sans-serif;
+    font-weight: 700;
+    color: #2b2b2d;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 10px 30px;
+    border: 1px solid #2b2b2d;
+    border-radius: 25px;
+    line-height: 0.8;
+    -webkit-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+  }
+  .main__link__effect:hover, .main__link__effect:focus {
+    background-color: #2b2b2d;
+    color: white;
+  }
+}
+
+@media (max-width: 864px) {
+  .hamburger__btn {
+    display: block;
+  }
+  .navbar__menu {
+    display: none;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 10px 2px grey;
+            box-shadow: 0 0 10px 2px grey;
+    border-radius: 8px;
+    position: absolute;
+    top: 56px;
+    right: 0;
+    padding: 15px 0;
+    -webkit-animation: all 0.2s linear forwards;
+            animation: all 0.2s linear forwards;
+  }
+  .d-block {
+    display: block;
+  }
+  .menu__link,
+  .main__link__effect {
+    display: block;
+    padding: 5px 40px;
+    font-size: 0.9rem;
+    font-weight: normal;
+  }
+  .menu__link:hover, .menu__link:focus,
+  .main__link__effect:hover,
+  .main__link__effect:focus {
+    background-color: #dfdcdc;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=main.css.map */

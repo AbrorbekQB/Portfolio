@@ -1,0 +1,155 @@
+.site__navbar {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.site__navbar__logo {
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+}
+.navbar__logo__img {
+  width: 70px;
+  height: 70px;
+}
+.navbar__owner__name__wrapper {
+  font-family: $MerSans;
+}
+.navbar__owner__fullname {
+  font-weight: 800;
+  margin: 0 0 2px;
+  line-height: 1;
+  color: $main-color;
+  font-size: 1rem;
+}
+.navbar__owner__profession {
+  margin: 0;
+  color: $second-color;
+  font-size: 0.8rem;
+}
+.menu__list {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 auto;
+  padding: 0;
+}
+.menu__item {
+  list-style-type: none;
+}
+.menu__link {
+  font-family: $MerSans;
+  font-weight: 700;
+  color: $main-color;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.main__link__effect {
+  font-family: $MerSans;
+  font-weight: 700;
+  color: $main-color;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.hamburger__btn {
+  display: none;
+  width: 28px;
+  height: 28px;
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  background: url("/img/hamburger.svg") no-repeat;
+  background-size: 80%;
+  background-position: center center;
+}
+
+@media (min-width: 864px) {
+  .menu__item {
+    list-style-type: none;
+    margin-left: 40px;
+  }
+  .menu__link {
+    font-family: $MerSans;
+    font-weight: 700;
+    color: $main-color;
+    text-transform: uppercase;
+    font-size: 1rem;
+    position: relative;
+    &:before {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: $main-color;
+      position: absolute;
+      left: 0;
+      bottom: -12px;
+      opacity: 0;
+      transition: all 0.2s linear;
+    }
+    &:hover::before,
+    &:focus::before {
+      opacity: 1;
+      transform: translateY(-8px);
+    }
+  }
+  .main__link__effect {
+    font-family: $MerSans;
+    font-weight: 700;
+    color: $main-color;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 10px 30px;
+    border: 1px solid $main-color;
+    border-radius: 25px;
+    line-height: 0.8;
+    transition: all 0.1s linear;
+    &:hover,
+    &:focus {
+      background-color: $main-color;
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 864px ) {
+  .hamburger__btn {
+    display: block;
+  }
+  .navbar__menu {
+    display: none;
+    background-color: #fff;
+    box-shadow: 0 0 10px 2px grey;
+    border-radius: 8px;
+    position: absolute;
+    top: 56px;
+    right: 0;
+    padding: 15px 0;
+    animation: all 0.2s linear forwards;
+  }
+  .d-block {
+    display: block;
+  }
+  .menu__link,
+  .main__link__effect {
+    display: block;
+    padding: 5px 40px;
+    font-size: 0.9rem;
+    font-weight: normal;
+    &:hover,
+    &:focus {
+      background-color: rgb(223, 220, 220);
+    }
+    // animation: name duration timing-function delay iteration-count direction fill-mode;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
