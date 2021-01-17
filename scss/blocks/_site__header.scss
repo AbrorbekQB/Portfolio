@@ -1,11 +1,14 @@
 .site__header {
-  min-height: 450px;
+  // min-height: 450px;
   display: flex;
+  align-items: flex-end;
   border-bottom: 2px solid rgb(212, 206, 206);
+  flex-wrap: wrap;
 }
 .site__header__texts {
-  width: 60%;
+  flex-grow: 1;
   padding-top: 90px;
+  margin-bottom: 90px;
 }
 .hello__iam {
   margin: 5px 0;
@@ -20,8 +23,12 @@
   color: $second-color;
 }
 .site__header__img {
-  width: 40%;
-  background-color: #666;
+  width: 350px;
+  height: 350px;
+  background-image: url("/img/owner__img.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .linkes__list {
   padding: 0;
@@ -42,6 +49,7 @@
   };
 }
 .social__link {
+  outline: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,4 +63,51 @@
 }
 .social__img {
   width: 70%;
+}
+.main__link__effects {
+  outline: none;
+  font-family: $MerSans;
+  font-weight: 700;
+  color: $main-color;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 10px 30px;
+  border: 1px solid $main-color;
+  border-radius: 25px;
+  line-height: 0.8;
+  transition: all 0.1s linear;
+  &:hover,
+  &:focus {
+    background-color: $main-color;
+    color: white;
+  }
+}
+@media (max-width: 700px) {
+  .site__header {
+    justify-content: center;
+  }
+  .site__header__img {
+    order: -1;
+    height: 150px;
+    background-size: contain;
+  }
+  .site__header__texts {
+    width: 100%;
+    text-align: center;
+    padding-top: 0;
+    margin-bottom: 20px;
+  }
+  .site__header__links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  .site__header__profession {
+    margin-bottom: 5px;
+  }
+  .social__link {
+    height: 26px;
+    width: 26px;
+    
+  }
 }

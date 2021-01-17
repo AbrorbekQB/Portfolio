@@ -141,8 +141,11 @@
     &:focus {
       background-color: rgb(223, 220, 220);
     }
-    // animation: name duration timing-function delay iteration-count direction fill-mode;
   }
+  .navbar__logo__img {
+  width: 50px;
+  height: 50px;
+}
 }
 
 @keyframes fade-in {
